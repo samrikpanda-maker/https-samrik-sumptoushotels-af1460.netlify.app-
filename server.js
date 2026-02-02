@@ -1,4 +1,5 @@
 const express = require('express');
+const path = require('path');
 const mongoose = require('mongoose');
 const cors = require('cors');
 const bodyParser = require('body-parser');
@@ -22,6 +23,8 @@ const PORT = process.env.PORT || 5000;
 app.use(cors());
 app.use(bodyParser.json());
 app.use(express.json());
+// Serve Static Frontend
+app.use(express.static(path.join(__dirname, 'simple_frontend')));
 
 // Connect to Database
 connectDB();
@@ -36,7 +39,7 @@ app.use('/api/notifications', notificationRoutes);
 app.use('/api/reports', reportRoutes);
 
 app.get('/', (req, res) => {
-    res.send('Hotel Booking Backend is running...');
+    res.sendFile(path.join(__dirname, 'simple_frontend', 'index.html'));
 });
 
 // Global Error Handler
