@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - LuxeStay</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ LuxeStay</a>
+            <div class="nav-links" id="nav-links"></div>
+        </div>
+    </nav>
+
+    <div class="form-container">
+        <h2 class="text-center section-title" style="margin-bottom: 0.5rem;">Welcome Back</h2>
+        <p class="text-center" style="color: var(--text-light); margin-bottom: 2rem;">Sign in to your account</p>
+
+        <div id="error-msg" class="text-center text-red hidden mb-4"></div>
+
+        <form id="login-form">
+            <div class="form-group">
+                <label>Email Address</label>
+                <input type="email" id="email" class="form-control" required>
+            </div>
+            <div class="form-group">
+                <label>Password</label>
+                <input type="password" id="password" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary" style="width: 100%;">Sign In</button>
+        </form>
+
+        <p class="text-center mt-4" style="font-size: 0.9rem;">
+            Don't have an account? <a href="register.html" style="color: var(--primary);">Sign up</a>
+        </p>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

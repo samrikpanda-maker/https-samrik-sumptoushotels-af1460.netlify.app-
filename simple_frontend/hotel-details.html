@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Details - LuxeStay</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Modal Styles */
+        .modal {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 1000;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ LuxeStay</a>
+            <div class="nav-links" id="nav-links"></div>
+        </div>
+    </nav>
+
+    <!-- Header Image -->
+    <div class="details-header">
+        <img id="hotel-img" src="" alt="Hotel" style="width: 100%; height: 100%; object-fit: cover;">
+        <div
+            style="position: absolute; bottom: 0; left: 0; width: 100%; background: linear-gradient(transparent, rgba(0,0,0,0.8)); padding: 2rem; color: white;">
+            <div class="container" style="margin: 0 auto;">
+                <h1 id="hotel-name" style="font-size: 3rem;">Loading...</h1>
+                <p id="hotel-location" style="font-size: 1.2rem; opacity: 0.9;"></p>
+            </div>
+        </div>
+    </div>
+
+    <div class="container details-content">
+        <!-- Left: Info -->
+        <div>
+            <h2 class="section-title" style="font-size: 1.8rem;">About the Hotel</h2>
+            <p id="hotel-desc" style="color: var(--text-light); margin-bottom: 2rem;"></p>
+
+            <h3 style="margin-bottom: 1rem;">Amenities</h3>
+            <div id="amenities-list" class="amenities-grid"></div>
+        </div>
+
+        <!-- Right: Rooms -->
+        <div
+            style="background: white; padding: 2rem; border-radius: 1rem; box-shadow: var(--shadow-lg); height: fit-content; border: 1px solid #e2e8f0;">
+            <h3 style="margin-bottom: 1.5rem; font-size: 1.5rem; font-weight: 700;">Available Rooms</h3>
+            <div id="room-list">
+                <!-- Rooms loaded by JS -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Booking Modal -->
+    <div id="booking-modal" class="modal hidden">
+        <div
+            style="background: white; padding: 2rem; border-radius: 1rem; width: 90%; max-width: 400px; text-align: center;">
+            <h2 style="margin-bottom: 1rem;">Confirm Booking</h2>
+            <p style="margin-bottom: 2rem; color: var(--text-light);">Total to pay: <span id="total-price"
+                    style="font-weight: 700; color: var(--text-dark);"></span></p>
+
+            <div style="display: flex; gap: 1rem;">
+                <button onclick="closeBookingModal()" class="btn btn-secondary" style="flex: 1;">Cancel</button>
+                <button id="pay-btn" onclick="confirmBooking()" class="btn btn-primary" style="flex: 1;">Pay
+                    Now</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

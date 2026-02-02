@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LuxeStay - Luxury Hotel Booking</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="index.html" class="logo">✨ LuxeStay</a>
+            <div class="nav-links" id="nav-links">
+                <!-- Dynamically filled by JS -->
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <header class="hero">
+        <div class="hero-content">
+            <h1>Find Your Next <br> <span style="color: #818cf8;">Luxury Escape</span></h1>
+            <p>Discover handpicked hotels with world-class amenities.</p>
+            
+            <form action="hotels.html" method="GET" style="background: white; padding: 0.5rem; border-radius: 50px; display: inline-flex; width: 100%; max-width: 500px;">
+                <input type="text" name="city" placeholder="Where do you want to go? (e.g. London)" required 
+                    style="border: none; padding: 1rem 1.5rem; flex: 1; border-radius: 50px; font-size: 1rem; outline: none;">
+                <button type="submit" class="btn btn-primary">Search</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Featured Section -->
+    <section class="container">
+        <h2 class="section-title">Featured Hotels</h2>
+        <div id="hotel-grid" class="hotel-grid">
+            <!-- Filled by JS -->
+        </div>
+    </section>
+
+    <footer style="background: var(--secondary); color: var(--text-light); text-align: center; padding: 3rem; margin-top: 4rem;">
+        <p>&copy; 2026 LuxeStay. All rights reserved.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
