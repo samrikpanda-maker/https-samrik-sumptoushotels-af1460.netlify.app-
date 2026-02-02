@@ -1,4 +1,4 @@
-const API_URL = 'http://localhost:5000/api';
+const API_URL = 'https://https-samrik-sumptoushotels-af1460.onrender.com/api';
 
 // --- Auth Helper Functions ---
 function getToken() {
